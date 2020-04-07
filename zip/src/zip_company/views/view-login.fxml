@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerLogin">
+   <children>
+      <Label alignment="CENTER" layoutY="-1.0" prefHeight="80.0" prefWidth="1400.0" style="-fx-background-color: #1269ba;" text="ZIP COMPANY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="178.0" prefHeight="39.0" prefWidth="69.0" text="Username" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField id="user_name" fx:id="txtUsername" layoutX="550.0" layoutY="182.0" prefHeight="31.0" prefWidth="269.0">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="453.0" layoutY="229.0" prefHeight="39.0" prefWidth="69.0" text="Password" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPass" layoutX="550.0" layoutY="233.0" prefHeight="31.0" prefWidth="269.0" />
+      <Hyperlink alignment="CENTER" contentDisplay="CENTER" layoutX="659.0" layoutY="275.0" onAction="#openForgotPassword" prefHeight="25.0" prefWidth="160.0" text="Forgot your password ?" textAlignment="CENTER">
+         <font>
+            <Font size="11.0" />
+         </font></Hyperlink>
+      <Button id="btn-login" layoutX="550.0" layoutY="317.0" mnemonicParsing="false" onAction="#openDashboard" prefHeight="31.0" prefWidth="269.0" style="-fx-background-color: green;" text="LOGIN" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-4.0" layoutY="721.0" prefHeight="40.0" prefWidth="1400.0" style="-fx-background-color: black;" />
+   </children>
+</Pane>

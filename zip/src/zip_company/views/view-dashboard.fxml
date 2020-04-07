@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerDashboard">
+   <children>
+      <Label alignment="CENTER" layoutX="-3.0" prefHeight="80.0" prefWidth="1400.0" style="-fx-background-color: #1269ba;" text="Add New Product" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Pane layoutY="81.0" prefHeight="418.0" prefWidth="132.0">
+         <children>
+            <Button fx:id="btnActive" layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openAddNewProduct" prefHeight="54.0" prefWidth="138.0" text="Add New Product" />
+            <Button layoutY="53.0" mnemonicParsing="false" onAction="#openEditProduct" prefHeight="54.0" prefWidth="132.0" text="Edit Product" />
+            <Button layoutX="-1.0" layoutY="105.0" mnemonicParsing="false" onAction="#openViewStore" prefHeight="54.0" prefWidth="138.0" text="View Store" />
+            <Button layoutY="159.0" mnemonicParsing="false" onAction="#openDailyInvoices" prefHeight="54.0" prefWidth="132.0" text="View Daily Invoices" />
+            <Button layoutY="211.0" mnemonicParsing="false" onAction="#openCreateInvoice" prefHeight="54.0" prefWidth="132.0" text="Create Invoice" />
+            <Button layoutY="265.0" mnemonicParsing="false" onAction="#openMyProfile" prefHeight="54.0" prefWidth="132.0" text="My Profile" />
+            <Button layoutY="319.0" mnemonicParsing="false" onAction="#openAddRemoveAdmin" prefHeight="54.0" prefWidth="132.0" text="Add/Remove Admin" />
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="80.0" prefHeight="670.0" prefWidth="16.0" style="-fx-background-color: grey;" />
+      <TextField fx:id="txtCode" layoutX="195.0" layoutY="169.0" prefHeight="31.0" prefWidth="252.0" promptText="Product Code">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtName" layoutX="544.0" layoutY="169.0" prefHeight="31.0" prefWidth="252.0" promptText="Name">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtType" layoutX="195.0" layoutY="241.0" prefHeight="31.0" prefWidth="252.0" promptText="Type">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtLength" layoutX="544.0" layoutY="241.0" prefHeight="31.0" prefWidth="252.0" promptText="Length(inches)">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtQty" layoutX="195.0" layoutY="304.0" prefHeight="31.0" prefWidth="252.0" promptText="Quantity">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtPrice" layoutX="544.0" layoutY="304.0" prefHeight="31.0" prefWidth="252.0" promptText="Price (PKR)">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextArea fx:id="txtDesc" layoutX="195.0" layoutY="375.0" prefHeight="65.0" prefWidth="602.0" promptText="Description">
+         <font>
+            <Font size="15.0" />
+         </font></TextArea>
+      <Button layoutX="707.0" layoutY="452.0" mnemonicParsing="false" onAction="#addNewProduct" prefHeight="35.0" prefWidth="89.0" style="-fx-background-color: #1269ba;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <MenuButton fx:id="menuButton" layoutX="1130.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Username">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#openLoginPage" text="Logout" />
+        </items>
+      </MenuButton>
+      <Pane layoutX="-4.0" layoutY="721.0" prefHeight="40.0" prefWidth="1410.0" style="-fx-background-color: black;" />
+      <Label layoutX="195.0" layoutY="93.0" prefHeight="21.0" prefWidth="323.0" text="Add the product details,">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="354.0" prefHeight="21.0" prefWidth="323.0" text="Optional Product Description">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="195.0" layoutY="150.0" prefHeight="21.0" prefWidth="104.0" text="Product Code" />
+      <Label layoutX="544.0" layoutY="150.0" prefHeight="21.0" prefWidth="104.0" text="Product Name" />
+      <Label layoutX="195.0" layoutY="218.0" prefHeight="21.0" prefWidth="104.0" text="Product Type" />
+      <Label layoutX="544.0" layoutY="218.0" prefHeight="21.0" prefWidth="104.0" text="Product Length" />
+      <Label layoutX="195.0" layoutY="284.0" prefHeight="21.0" prefWidth="104.0" text="Product Quantity" />
+      <Label layoutX="544.0" layoutY="284.0" prefHeight="21.0" prefWidth="104.0" text="Product Price" />
+   </children>
+</AnchorPane>

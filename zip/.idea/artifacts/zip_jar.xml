@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="zip:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/zip_jar</output-path>
+    <root id="archive" name="zip.jar">
+      <element id="module-output" name="zip" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/sqlite-jdbc-3.27.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../itextpdf-5.5.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

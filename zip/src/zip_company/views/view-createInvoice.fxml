@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerCreateInvoice">
+   <children>
+      <Label alignment="CENTER" layoutX="-3.0" prefHeight="80.0" prefWidth="1400.0" style="-fx-background-color: #1269ba;" text="Create Invoice" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Pane layoutY="81.0" prefHeight="408.0" prefWidth="132.0">
+         <children>
+            <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openAddNewProduct" prefHeight="54.0" prefWidth="138.0" text="Add New Product" />
+            <Button layoutY="53.0" mnemonicParsing="false" onAction="#openEditProduct" prefHeight="54.0" prefWidth="132.0" text="Edit Product" />
+            <Button layoutX="-1.0" layoutY="105.0" mnemonicParsing="false" onAction="#openViewStore" prefHeight="54.0" prefWidth="138.0" text="View Store" />
+            <Button layoutY="159.0" mnemonicParsing="false" onAction="#openDailyInvoices" prefHeight="54.0" prefWidth="132.0" text="View Daily Invoices" />
+            <Button fx:id="btnActive" layoutY="211.0" mnemonicParsing="false" onAction="#openCreateInvoice" prefHeight="54.0" prefWidth="132.0" text="Create Invoice" />
+            <Button layoutY="265.0" mnemonicParsing="false" onAction="#openMyProfile" prefHeight="54.0" prefWidth="132.0" text="My Profile" />
+            <Button layoutY="319.0" mnemonicParsing="false" onAction="#openAddRemoveAdmin" prefHeight="54.0" prefWidth="132.0" text="Add/Remove Admin" />
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="80.0" prefHeight="678.0" prefWidth="16.0" style="-fx-background-color: grey;" />
+      <MenuButton fx:id="menuButton" layoutX="1130.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Username">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#openLoginPage" text="Logout" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="txtSearchCode" layoutX="171.0" layoutY="120.0" prefHeight="31.0" prefWidth="243.0" promptText="Product Code">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtTax" layoutX="168.0" layoutY="547.0" prefHeight="30.0" prefWidth="195.0" promptText="Additional Tax">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtQty" layoutX="245.0" layoutY="249.0" prefHeight="30.0" prefWidth="195.0" promptText="Quantity">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button fx:id="btnApply" disable="true" layoutX="615.0" layoutY="600.0" mnemonicParsing="false" onAction="#openInvoicePreview" prefHeight="37.0" prefWidth="156.0" style="-fx-background-color: green;" text="Preview Invoice" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Label layoutX="171.0" layoutY="91.0" prefHeight="21.0" prefWidth="367.0" text="Fill the Invoice form to generate a bill/invoice">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtRemaining" layoutX="430.0" layoutY="548.0" prefHeight="30.0" prefWidth="195.0" promptText="Remaining">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="171.0" layoutY="605.0" prefHeight="27.0" prefWidth="166.0" text="Total Bill (PKR) Rs.">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Text fx:id="labelBill" layoutX="357.0" layoutY="628.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="166.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Label layoutX="823.0" layoutY="170.0" prefHeight="27.0" prefWidth="119.0" text="Price/Unit (PKR)">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelStock" layoutX="693.0" layoutY="200.0" prefHeight="27.0" prefWidth="86.0" text="Qty">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCust" layoutX="682.0" layoutY="548.0" prefHeight="30.0" prefWidth="195.0" promptText="Customer Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="334.0" layoutY="171.0" prefHeight="27.0" prefWidth="42.0" text="Name">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelName" layoutX="303.0" layoutY="200.0" prefHeight="27.0" prefWidth="104.0" text="N">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="446.0" layoutY="171.0" prefHeight="27.0" prefWidth="42.0" text="Type">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelType" layoutX="424.0" layoutY="200.0" prefHeight="27.0" prefWidth="86.0" text="T">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="558.0" layoutY="170.0" prefHeight="27.0" prefWidth="92.0" text="Length(inch)">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLength" layoutX="558.0" layoutY="200.0" prefHeight="27.0" prefWidth="92.0" text="L">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="715.0" layoutY="171.0" prefHeight="27.0" prefWidth="42.0" text="Stock">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelPrice" layoutX="838.0" layoutY="200.0" prefHeight="27.0" prefWidth="104.0" text="PRICE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="446.0" layoutY="120.0" mnemonicParsing="false" onAction="#searchCode" prefHeight="19.0" prefWidth="132.0" style="-fx-background-color: #1269ba;" text="Search in store" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="1047.0" layoutY="170.0" prefHeight="27.0" prefWidth="144.0" text="Product Description">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDesc" layoutX="966.0" layoutY="200.0" prefHeight="27.0" prefWidth="289.0" text="DESC">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="171.0" prefHeight="27.0" prefWidth="42.0" text="Code">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCode" layoutX="185.0" layoutY="200.0" prefHeight="27.0" prefWidth="92.0" text="CODE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="-4.0" layoutY="721.0" prefHeight="40.0" prefWidth="1400.0" style="-fx-background-color: black;" />
+      <Label layoutX="179.0" layoutY="254.0" prefHeight="20.0" prefWidth="59.0" text="Quantity">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="173.0" layoutY="522.0" prefHeight="20.0" prefWidth="92.0" text="Additional Tax">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="684.0" layoutY="524.0" prefHeight="17.0" prefWidth="104.0" text="Customer Name" />
+      <Line endX="926.0" endY="10.0" layoutX="342.0" layoutY="160.0" startX="-164.0" startY="10.0" />
+      <Line endX="926.0" endY="10.0" layoutX="342.0" layoutY="188.0" startX="-164.0" startY="10.0" />
+      <Line endX="-22.5" endY="-24.5" layoutX="200.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="315.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="436.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="549.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="686.0" layoutY="223.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="829.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="983.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="1291.0" layoutY="222.0" startX="-22.5" startY="-52.5" />
+      <Line endX="926.0" endY="10.0" layoutX="342.0" layoutY="218.0" startX="-164.0" startY="10.0" />
+      <Line endX="-22.5" endY="-24.5" layoutX="200.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="315.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="1291.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="436.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="549.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="686.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="829.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Line endX="-22.5" endY="-24.5" layoutX="983.0" layoutY="252.0" startX="-22.5" startY="-52.5" />
+      <Button fx:id="btnAddInInvoice" disable="true" layoutX="500.0" layoutY="249.0" mnemonicParsing="false" onAction="#addProductInInvoice" style="-fx-background-color: green;" text="Add in Invoice" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="430.0" layoutY="522.0" prefHeight="20.0" prefWidth="92.0" text="Remaining">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="177.0" layoutY="303.0" prefHeight="200.0" prefWidth="1091.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="mainGrid" prefHeight="200.0" prefWidth="1073.0">
+                    <columns>
+                      <TableColumn fx:id="colCode" prefWidth="104.0" text="Code" />
+                      <TableColumn fx:id="colName" prefWidth="151.0" text="Name" />
+                        <TableColumn fx:id="colType" prefWidth="102.0" text="Type" />
+                        <TableColumn fx:id="colLength" prefWidth="124.0" text="Length" />
+                        <TableColumn fx:id="colQty" prefWidth="79.0" text="Qty" />
+                        <TableColumn fx:id="colPrice" prefWidth="140.0" text="Price (PKR)" />
+                        <TableColumn fx:id="colDesc" prefWidth="359.0" text="Description" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="btnRemoveProduct" layoutX="653.0" layoutY="249.0" mnemonicParsing="false" onAction="#removeProductFromInvoice" prefHeight="31.0" prefWidth="166.0" style="-fx-background-color: red;" text="Remove From Invoice" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

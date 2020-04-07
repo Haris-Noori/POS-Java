@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerAddAdmins">
+   <children>
+      <Label alignment="CENTER" layoutX="-3.0" prefHeight="80.0" prefWidth="1400.0" style="-fx-background-color: #1269ba;" text="Add New Admin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Pane layoutY="81.0" prefHeight="408.0" prefWidth="132.0">
+         <children>
+            <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openAddNewProduct" prefHeight="54.0" prefWidth="138.0" text="Add New Product" />
+            <Button layoutY="53.0" mnemonicParsing="false" onAction="#openEditProduct" prefHeight="54.0" prefWidth="132.0" text="Edit Product" />
+            <Button layoutX="-1.0" layoutY="105.0" mnemonicParsing="false" onAction="#openViewStore" prefHeight="54.0" prefWidth="138.0" text="View Store" />
+            <Button layoutY="159.0" mnemonicParsing="false" onAction="#openDailyInvoices" prefHeight="54.0" prefWidth="132.0" text="View Daily Invoices" />
+            <Button layoutY="211.0" mnemonicParsing="false" onAction="#openCreateInvoice" prefHeight="54.0" prefWidth="132.0" text="Create Invoice" />
+            <Button layoutY="265.0" mnemonicParsing="false" onAction="#openMyProfile" prefHeight="54.0" prefWidth="132.0" text="My Profile" />
+            <Button fx:id="btnActive" layoutY="319.0" mnemonicParsing="false" onAction="#openAddRemoveAdmin" prefHeight="54.0" prefWidth="132.0" text="Add/Remove Admin" />
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="80.0" prefHeight="677.0" prefWidth="16.0" style="-fx-background-color: grey;" />
+      <TextField fx:id="txtNewUsername" layoutX="172.0" layoutY="132.0" prefHeight="30.0" prefWidth="219.0" promptText="Username">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField fx:id="txtNewPassword" layoutX="422.0" layoutY="132.0" prefHeight="31.0" prefWidth="219.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="668.0" layoutY="132.0" mnemonicParsing="false" onAction="#addNewAdmin" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: green;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="menuButton" layoutX="1130.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Username">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#openLoginPage" text="Logout" />
+         </items>
+      </MenuButton>
+      <Label layoutX="175.0" layoutY="96.0" prefHeight="21.0" prefWidth="493.0" text="Add username and password, then click add to create new admin">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="172.0" layoutY="326.0" prefHeight="21.0" prefWidth="249.0" text="Existing admins">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="175.0" layoutY="364.0" prefHeight="230.0" prefWidth="249.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="231.0" prefWidth="232.0">
+               <children>
+                  <TableView fx:id="mainGrid" prefHeight="230.0" prefWidth="234.0">
+                    <columns>
+                      <TableColumn fx:id="columnAdminName" prefWidth="240.0" text="Admin Name" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Label layoutX="172.0" layoutY="201.0" prefHeight="20.0" prefWidth="416.0" text="To remove any admin, Enter the Name here:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUsername" layoutX="172.0" layoutY="234.0" prefHeight="25.0" prefWidth="219.0" promptText="Admin Name">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="422.0" layoutY="234.0" mnemonicParsing="false" onAction="#removeAdmin" prefHeight="25.0" prefWidth="138.0" style="-fx-background-color: red;" text="REMOVE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Pane layoutX="-4.0" layoutY="721.0" prefHeight="40.0" prefWidth="1400.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

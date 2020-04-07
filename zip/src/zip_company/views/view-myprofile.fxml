@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerMyProfile">
+   <children>
+      <Label alignment="CENTER" prefHeight="80.0" prefWidth="1400.0" style="-fx-background-color: #1269ba;" text="My Profile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Pane layoutY="81.0" prefHeight="408.0" prefWidth="132.0">
+         <children>
+            <Button layoutX="-1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#openAddNewProduct" prefHeight="54.0" prefWidth="138.0" text="Add New Product" />
+            <Button layoutY="53.0" mnemonicParsing="false" onAction="#openEditProduct" prefHeight="54.0" prefWidth="132.0" text="Edit Product" />
+            <Button layoutX="-1.0" layoutY="105.0" mnemonicParsing="false" onAction="#openViewStore" prefHeight="54.0" prefWidth="138.0" text="View Store" />
+            <Button layoutY="159.0" mnemonicParsing="false" onAction="#openDailyInvoices" prefHeight="54.0" prefWidth="132.0" text="View Daily Invoices" />
+            <Button layoutY="211.0" mnemonicParsing="false" onAction="#openCreateInvoice" prefHeight="54.0" prefWidth="132.0" text="Create Invoice" />
+            <Button fx:id="btnActive" layoutY="265.0" mnemonicParsing="false" onAction="#openMyProfile" prefHeight="54.0" prefWidth="132.0" text="My Profile" />
+            <Button layoutY="319.0" mnemonicParsing="false" onAction="#openAddRemoveAdmin" prefHeight="54.0" prefWidth="132.0" text="Add/Remove Admin" />
+         </children>
+      </Pane>
+      <Pane layoutX="132.0" layoutY="80.0" prefHeight="679.0" prefWidth="16.0" style="-fx-background-color: grey;" />
+      <MenuButton fx:id="menuButton" layoutX="1130.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Username">
+         <items>
+            <MenuItem mnemonicParsing="false" onAction="#openLoginPage" text="Logout" />
+         </items>
+      </MenuButton>
+      <TextField fx:id="txtNewPassword" layoutX="324.0" layoutY="151.0" prefHeight="31.0" prefWidth="273.0" promptText="New Password">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button fx:id="btnUpdatePassword" layoutX="629.0" layoutY="151.0" mnemonicParsing="false" onAction="#updateNewPassword" prefHeight="29.0" prefWidth="93.0" style="-fx-background-color: #1269ba;" text="Update " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Label layoutX="173.0" layoutY="99.0" prefHeight="25.0" prefWidth="428.0" text="To change your password, type here your new password">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="173.0" layoutY="155.0" prefHeight="21.0" prefWidth="138.0" text="New Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="btnMenu" layoutX="207.0" layoutY="252.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="516.0" text="Add Question ">
+        <items>
+          <MenuItem id="question1" fx:id="menuItem1" mnemonicParsing="false" onAction="#selectOptionOne" text="What is your favorite color?" />
+            <MenuItem fx:id="menuItem2" mnemonicParsing="false" onAction="#selectOptionTwo" text="Which phone number do you remember most from your childhood?" />
+            <MenuItem fx:id="menuItem3" mnemonicParsing="false" onAction="#selectOptionThree" text="What was your favorite place to visit as a child?" />
+        </items>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </MenuButton>
+      <Label layoutX="173.0" layoutY="227.0" prefHeight="21.0" prefWidth="437.0" text="In case you forget your password, add two security question:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="257.0" prefHeight="21.0" prefWidth="38.0" text="Q1: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAnswer" layoutX="207.0" layoutY="301.0" prefHeight="31.0" prefWidth="516.0" promptText="My Answer">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Button layoutX="533.0" layoutY="354.0" mnemonicParsing="false" onAction="#setQuestionAnswer" prefHeight="37.0" prefWidth="190.0" style="-fx-background-color: #1269ba;" text="Set Question -Answer" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Pane layoutX="-4.0" layoutY="721.0" prefHeight="40.0" prefWidth="1400.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

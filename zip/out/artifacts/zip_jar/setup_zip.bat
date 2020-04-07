@@ -1,0 +1,1 @@
+java --module-path C:/Users/Haris/Downloads/java/openjfx-11.0.02_linux-x64_bin-sdk/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml -jar zip.jar

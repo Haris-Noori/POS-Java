@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.*?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zip_company.Controllers.ControllerPreviewInvoice">
+   <children>
+      <Label alignment="CENTER" layoutX="418.0" layoutY="60.0" prefHeight="36.0" prefWidth="255.0" style="-fx-background-color: black;" text="INVOICE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Label fx:id="labelBill" alignment="CENTER_RIGHT" layoutX="788.0" layoutY="545.0" prefHeight="25.0" prefWidth="83.0" text="0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="652.0" layoutY="545.0" prefHeight="25.0" prefWidth="136.0" text="TOTAL :" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Label layoutX="37.0" layoutY="116.0" prefHeight="19.0" prefWidth="136.0" text="Customer Name: " textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Label alignment="CENTER" layoutX="449.0" layoutY="540.0" prefHeight="36.0" prefWidth="122.0" text="THANK YOU!" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Line endX="968.0" layoutX="154.0" layoutY="103.0" startX="-120.0" />
+      <Button fx:id="btnEdit" layoutX="287.0" layoutY="639.0" mnemonicParsing="false" onAction="#goBackToInvoice" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #1269ba;" text="EDIT" textFill="#ebebeb" />
+      <Label contentDisplay="CENTER" layoutX="698.0" layoutY="611.0" prefHeight="17.0" prefWidth="75.0" text="Created By: " textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Line endX="967.0" layoutX="154.0" layoutY="53.0" startX="-120.0" />
+      <Label fx:id="labelDate" layoutX="35.0" layoutY="34.0" prefHeight="17.0" prefWidth="97.0" text="Date">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelCust" layoutX="187.0" layoutY="116.0" prefHeight="19.0" prefWidth="231.0" text="No Name" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+               </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+      <Label fx:id="labelDiscount" alignment="CENTER_RIGHT" layoutX="814.0" layoutY="512.0" prefHeight="19.0" prefWidth="57.0" text="0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="694.0" layoutY="512.0" prefHeight="19.0" prefWidth="83.0" text="Remainings:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="886.0" layoutY="493.0" prefHeight="19.0" prefWidth="24.0" text="PKR">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="667.0" layoutY="493.0" prefHeight="19.0" prefWidth="107.0" text="Additional Tax:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTax" alignment="CENTER_RIGHT" layoutX="814.0" layoutY="493.0" prefHeight="19.0" prefWidth="57.0" text="0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="886.0" layoutY="512.0" prefHeight="19.0" prefWidth="24.0" text="PKR">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Line endX="181.0" layoutX="734.0" layoutY="539.0" startX="-74.0" />
+      <Label layoutX="881.0" layoutY="545.0" prefHeight="25.0" prefWidth="35.0" text="PKR">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Line endX="181.0" layoutX="733.0" layoutY="580.0" startX="-72.0" />
+      <Label fx:id="labelCreator" contentDisplay="CENTER" layoutX="774.0" layoutY="611.0" prefHeight="17.0" prefWidth="149.0" text="Name" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnPrint" layoutX="438.0" layoutY="639.0" mnemonicParsing="false" onAction="#generateInvoice" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #1269ba;" text="Print" textFill="#ebebeb" />
+      <ScrollPane layoutX="84.0" layoutY="150.0" prefHeight="303.0" prefWidth="852.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="837.0">
+               <children>
+                  <TableView fx:id="mainGrid" prefHeight="303.0" prefWidth="839.0">
+                     <columns>
+                        <TableColumn fx:id="colCode" prefWidth="104.0" text="Code" />
+                        <TableColumn fx:id="colName" prefWidth="151.0" text="Name" />
+                        <TableColumn fx:id="colType" prefWidth="102.0" text="Type" />
+                        <TableColumn fx:id="colLength" prefWidth="124.0" text="Length" />
+                        <TableColumn fx:id="colQty" prefWidth="79.0" text="Qty" />
+                        <TableColumn fx:id="colPrice" prefWidth="140.0" text="Price/unit (PKR)" />
+                        <TableColumn fx:id="colTotal" prefWidth="136.0" text="Total (PKR)" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER_RIGHT" layoutX="667.0" layoutY="474.0" prefHeight="19.0" prefWidth="107.0" text="Sub Total:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelSubTotal" alignment="CENTER_RIGHT" layoutX="814.0" layoutY="474.0" prefHeight="19.0" prefWidth="57.0" text="0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="887.0" layoutY="474.0" prefHeight="19.0" prefWidth="24.0" text="PKR">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
